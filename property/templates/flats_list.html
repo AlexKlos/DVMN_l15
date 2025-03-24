@@ -37,10 +37,10 @@
                   <p>город</p>
                   <div class="form-group">
                     <select name="town" class="form-control">
-                      <option {%ifequal town active_town%}selected {%endifequal%}value="">---</option>
+                      <option {% if town == active_town %}selected{% endif %} value="">---</option>
                       {% for town in towns %}
-                        <option {%ifequal town active_town%}selected {%endifequal%}value="{{town}}">{{town}}</option>
-                      {% endfor %}
+                        <option {% if town == active_town %}selected{% endif %} value="{{ town }}">{{ town }}</option>
+                      {% endfor %}                      
                     </select>
                   </div>
                   <div class="form-group ">
