@@ -26,6 +26,8 @@ def get_pure_phone(apps, schema_editor):
         except phonenumbers.NumberParseException:
             flat.owner_pure_phone = None
 
+        flat.save()
+
 
 class Migration(migrations.Migration):
 
